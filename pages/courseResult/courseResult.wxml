@@ -1,0 +1,27 @@
+<Navbar page-name="测试结果" bind:backEvent="resultBack"></Navbar>
+<view class="dell-container">
+  <!-- 统计作答 -->
+  <block wx:if="{{type == 2}}">
+    <block wx:if="{{is_pass == 1}}">
+      <view class="pass-result">
+        <image src="../../assets/images/pass.png" class="icon-pass" />
+      </view>
+      <view class="pass-score">达标分数：{{pass_score}}分，本次测试得分：{{user_score}}</view>
+      <view class="pass-text fs17 tr">恭喜您通过测试</view>
+    </block>
+    <block wx:else>
+      <view class="pass-result">
+        <image src="../../assets/images/fail.png" class="icon-pass" />
+      </view>
+      <view class="pass-score">达标分数：{{pass_score}}分，本次测试得分：{{user_score}}</view>
+      <view class="pass-text fs17 tr">测试未通过</view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="pass-result">
+      <image src="../../assets/images/pass.png" class="icon-pass" />
+      <view class="pass-text fs17 tr">恭喜您通过测试</view>
+    </view>
+  </block>
+  <view class="pass-tip c9">系统将在5秒后自动返回</view>
+</view>

@@ -1,0 +1,13 @@
+<Navbar page-name="消息" show-nav="{{false}}"></Navbar>
+<view class="dell-container">
+  <view class="notice" wx:for="{{noticeList}}" wx:key="{{id}}" >
+      <view class="nt-hd" bindtap="toNewsDetail" data-id="{{item.id}}">
+          <image  class="icon-notice" src="../../assets/images/icon-notice.png" />
+          <span>{{item.name}}</span>
+          <em wx:if="{{item.is_view == 0}}" class="unread"></em>
+        </view>
+      <view class="nt-bd" bindtap="toNewsDetail" data-id="{{item.id}}">{{item.remark}}</view>
+      <view class="nt-ft">{{item.create_at}}</view>
+  </view>
+  <NoData wx:if="{{noticeList.length == 0}}" ></NoData>
+</view>

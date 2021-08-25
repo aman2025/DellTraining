@@ -1,0 +1,55 @@
+<Navbar page-name="{{testInfo.name}}" ></Navbar>
+<view class="dell-container">
+  <view class="course-test">
+  <!-- 错误 -->
+  <view class="fail-result-wrap" wx:if="{{showFail}}">
+      <view class="fail-result">
+        <image src="../../assets/images/fail.png" class="icon-fail" />
+      </view>
+      <view class="fail-text fs17 tr">测试未通过</view>
+      <view class="fail-tip fs12 tr c9">以下题目有误，请继续答题</view>
+  </view>
+  <!-- //错误 -->
+   <!-- 题目 -->
+  <wxs src="../../utils/tools.wxs" module="tools" />
+  <view>
+    <view class="qa-item" wx:for="{{testInfo.config}}" wx:key="index" >
+      <view>
+        <view class="qa-item-hd">{{item.title}}</view>
+      </view>
+      <view wx:if="{{item.image}}" class="courseTest-pic">
+        <image mode="heightFix" src="{{item.image}}"/>
+      </view>
+      <view>
+        <radio-group wx:if="{{item.type == 1}}" bindchange="checkboxChange" data-index="{{index}}">
+          <label class="qa-cell" wx:for="{{item.select}}" wx:for-item="value" wx:key="{{id}}">
+            <view class="qa-cell-hd">
+              <radio value="{{value.id}}" color="#0076CE" checked="{{value.checked}}"/>
+            </view>
+            <view class="qa-cell-bd">{{tools.numberToABC(index)}}.{{value.option}}</view>
+          </label>
+        </radio-group>
+        <checkbox-group wx:else bindchange="checkboxChange" data-index="{{index}}">
+          <label  class="qa-cell" wx:for="{{item.select}}" wx:for-item="value" wx:key="{{id}}" >
+            <view class="qa-cell-hd">
+              <checkbox value="{{value.id}}" checked="{{value.checked}}" />
+            </view>
+            <view class="qa-cell-bd">{{tools.numberToABC(index)}}.{{value.option}}</view>
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+   <!-- 题目 -->
+    <view class="btn-wrap">
+        <button class="btn large" bindtap="handleOk">提交答案</button>
+    </view>
+  </view>
+</view>
+<!-- 弹窗 -->
+<Dialog title="{{dialogData.title}}" 
+        content="{{dialogData.content}}" 
+        confirmText="{{dialogData.confirmText}}" 
+        isShown="{{isShown}}"
+        bind:closeEvent="{{dialogData.closeEvent}}"
+        bind:confirmEvent="{{dialogData.confirmEvent}}"/>

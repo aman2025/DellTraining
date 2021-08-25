@@ -1,0 +1,41 @@
+.endTime{
+  padding: 0 0 24rpx;
+  text-align: center;
+  border-bottom: 1px solid#D7D7D7;
+  margin-bottom: 40rpx;
+}
+.upload-img-item{
+  position: relative;
+  width: 240rpx;
+  height: 240rpx;
+}
+.upload-img-item .upload-img-close{
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+  width:50rpx;
+  height:50rpx;
+  z-index: 9;
+}
+.feedback-form-item{
+  margin-bottom: 30rpx;
+}
+.dell-form .df-hd{
+  padding-bottom: 10rpx;
+  font-weight: bold;
+}
+.upload-bg{
+  width: 240rpx;
+  height: 240rpx;
+}
+.upload-img-wrap{
+  display: flex;
+}
+.feedback-btn-wrap{
+  padding: 30rpx 0;
+}
+.feedback-btn-wrap navigator{
+  text-align: center;
+  color: #0076CE;
+  padding: 28rpx 0 10rpx;
+}

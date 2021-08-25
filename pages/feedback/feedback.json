@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "UploadImg": "../../components/UploadImg/uploadImg",
+    "Navbar": "../../components/Navbar/navbar",
+    "Select": "../../components/Select/select",
+    "date-picker": "../../components/date-picker/date-picker",
+    "Dialog": "../../components/Dialog/dialog"
+  } 
+}

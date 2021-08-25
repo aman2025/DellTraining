@@ -1,0 +1,10 @@
+<view class="navbar custom-class"  style='height:{{navHeight}}rpx;'>
+  <view wx:if="{{showNav}}" class="navbar-action-wrap" catchtap="_navBack">
+      <image src="../../assets/images/goBack.png" class="icon-back" style='top:{{navTop}}px;'   />
+  </view>
+  <view class='navbar-title' style='top:{{navTop}}px'>
+    {{pageName}}
+  </view>
+</view>
+<!-- 全屏背景不显示 -->
+<view style="height:{{navHeight}}rpx"></view>

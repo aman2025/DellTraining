@@ -1,0 +1,33 @@
+<image mode="widthFix" src="../../assets/images/loginBg.png" class="dell-image navbar-bg" />
+<Navbar page-name="" show-nav="{{false}}"></Navbar>
+<view class="blank login-blank"></view>
+<view class="login-wrap dell-container">
+  <view class="login-title">
+    <span>登录</span>
+  </view>
+  <view class="login">
+    <view class="login-item">
+      <image src="../../assets/images/icon-login-user.png" />
+      <input bindinput="handleUid" placeholder="请输入您的工号" placeholder-class="placeholder-color" />
+    </view>
+    <view class="login-item">
+      <image src="../../assets/images/icon-login-password.png" />
+      <view class="li-ipt">
+        <input bindinput="handlePassword"  placeholder="请输入您的密码" placeholder-class="placeholder-color" password="true" />
+      </view>
+      <navigator bindtap="callConsumer">忘记密码？</navigator>
+    </view>
+  </view>
+  <view class="login-submit">
+    <button class="btn large" bindtap="doLogin">提交</button>
+    <view class="login-tip c9 fs12">{{commonConfig.login_prompt}}</view>
+  </view>
+</view>
+<!-- <button bindtap="getUserProfile">微信授权登录</button> -->
+<!-- 弹窗 -->
+<Dialog title="{{dialogData.title}}" 
+        content="{{dialogData.content}}" 
+        confirmText="{{dialogData.confirmText}}" 
+        isShown="{{isShown}}"
+        bind:closeEvent="{{dialogData.closeEvent}}"
+        bind:confirmEvent="{{dialogData.confirmEvent}}"/>

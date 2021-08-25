@@ -1,0 +1,33 @@
+<Navbar page-name="活动详情"></Navbar>
+<view class="banner">
+  <image mode="widthFix" src="{{promotionDetail.image}}"  class="dell-image" />
+  <view class="tips fs12" bindtap="showRules">活动规则</view>
+  <navigator class="tips t-next fs12" catchtap="toRank" >排行榜</navigator>
+</view>
+<view class="dell-container">
+  <view class="endTime fs12">活动结束时间：{{promotionDetail.end_at}}</view>
+  <view class="piclist large">
+      <view class="pitem" wx:for="{{promotionList}}" wx:key="{{id}}">
+        <view class="pic">
+          <image mode="aspectFill" src="{{item.image}}" catchtap="pic_preview" data-url="{{item.image}}" class="aspect-pic" />
+        </view>
+        <view class="content">
+            <view class="c-hd">{{item.name}}</view>
+            <view class="c-ft">
+                <span class="t-ft-label fs12 c9">当前票数：{{item.vote_num}}</span>
+                <span  class="c-ft-btn">
+                  <button wx:if="{{item.is_vote == 0}}" class="btn" data-vid="{{item.id}}" bindtap="doVote">立即投票</button>
+                  <button wx:else class="btn disabled">已投票</button>
+                </span>
+            </view>
+        </view>
+      </view>
+  </view>
+</view>
+<!-- 弹窗 -->
+<Dialog title="{{dialogData.title}}" 
+        content="{{dialogData.content}}" 
+        confirmText="{{dialogData.confirmText}}" 
+        isShown="{{isShown}}"
+        bind:closeEvent="{{dialogData.closeEvent}}"
+        bind:confirmEvent="{{dialogData.confirmEvent}}"/>

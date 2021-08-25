@@ -1,0 +1,148 @@
+.list-item{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 54rpx;
+    line-height: 54rpx;
+    padding: 0 30rpx;
+    margin-bottom: 72rpx;
+}
+.list-item .list-item-hd{
+   width:80rpx;
+}
+.list-item .list-item-bd{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+ }
+ .list-item .list-item-ft{
+    text-align: right;
+    position: relative;
+ }
+ .list-item .list-item-ft:after {
+  content: "";
+  display: inline-block;
+  height: 12rpx;
+  width: 12rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-color: #D7D7D7;
+  border-style: solid;
+  -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+  transform: matrix(.71,.71,-.71,.71,0,0);
+  position: relative;
+  top: -4rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 4rpx;
+}
+.list-item:active{
+    background-color: #f5f8fc;
+}
+.list-icon{
+    display: block;
+    width: 54rpx;
+    height: 54rpx;
+}
+.my-banner-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.my-banner{
+    width:690rpx;
+    height: 140rpx;
+}
+.my-info-wrap{
+    display: flex;
+    padding: 0 30rpx;
+}
+.my-info-wrap .my-avatar{
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    overflow: hidden;
+} 
+.my-info-wrap .content{
+    padding-left: 28rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+.my-info-wrap .content .nickname{
+    padding: 5rpx 0;
+    font-size: 34rpx;
+    align-self: end;
+} 
+.my-info-wrap .content .department{
+    padding: 5rpx 0;
+    font-size: 20rpx;
+}
+.my-info-wrap .content .uid{
+    background-color: #0076CE;
+    color: #fff;
+    /* border-radius: 5rpx; */
+    text-align: center;
+    padding: 5rpx 8rpx;
+} 
+.my-info-wrap .content .dep{
+    background: linear-gradient(#D0AA86, #E5BD85);
+    color: #fff;
+    border-radius: 5rpx;
+    text-align: center;
+    padding: 5rpx 8rpx;
+    margin-left: 8rpx;
+    transform:skew(30deg, 0)
+} 
+/* 单独页面中，导航栏背景透明 */
+.navbar {
+  background-color: transparent !important;
+}
+
+.notice{
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 0 14px 0 rgba(1, 18, 135, 0.08);
+  padding: 30rpx;
+  margin-bottom: 28rpx;
+}
+.notice .nt-hd{
+  font-weight: bold;
+  display: flex;
+  position: relative;
+}
+.notice .nt-hd span{
+  padding-left: 26rpx;
+}
+.notice .nt-hd .icon-notice{
+  width: 40rpx;
+  height: 42rpx;
+}
+.notice .nt-bd{
+  padding: 20rpx 0;
+  color: var(--gray9);
+  font-size: 26rpx;
+  
+}
+.notice .nt-ft{
+  font-size: 24rpx;
+  text-align: right;
+  color: var(--gray9);
+}
+.notice .unread{
+  position: absolute;
+  top: 2rpx;
+  left: 25rpx;
+  width: 16rpx;
+  height: 16rpx;
+  background-color: #F66665;
+  border: 4rpx solid #fff;
+  border-radius: 50%;
+}
+.notice-wrap{
+  padding: 30rpx;
+}
+.no-message{
+  height: 60rpx;
+}

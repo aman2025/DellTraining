@@ -1,0 +1,27 @@
+<image mode="widthFix" src="../../assets/images/rankBg.png" class="dell-image navbar-bg" />
+<Navbar page-name="排行榜"></Navbar>
+<view class="blank rank-blank"></view>
+<view class="rank dell-container">
+  <view class="rank-item th">
+    <view class="rk-hd c9" >名次</view>
+    <view class="rk-bd c9">活动名称</view>
+    <view class="rk-ft c9">票数</view>
+  </view>
+  <view class="rank-item" wx:for="{{rank}}"  wx:key="*this">
+    <view wx:if="{{index == 0}}" class="rk-hd">
+      <image src="../../assets/images/top01.png" class="icon-rank" />
+    </view>
+    <view wx:elif="{{index == 1}}" class="rk-hd">
+      <image src="../../assets/images/top02.png" class="icon-rank" />
+    </view>
+    <view wx:elif="{{index == 2}}" class="rk-hd">
+      <image src="../../assets/images/top03.png" class="icon-rank" />
+    </view>
+    <view wx:else class="rk-hd">
+      <span>{{index + 3}}</span>
+    </view>
+    <view class="rk-bd">{{item.name}}</view>
+    <view class="rk-ft">{{item.vote_num}}</view>
+  </view>
+ 
+</view>

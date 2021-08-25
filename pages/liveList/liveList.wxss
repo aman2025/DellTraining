@@ -1,0 +1,50 @@
+.piclist .pitem .pic{
+  position: relative;
+}
+.piclist .pitem .pic .status{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0076CE;
+  border-radius: 4px 0px 10px 0px;
+  color: #fff;
+  text-align: left;
+  white-space: nowrap;
+  min-width: 80rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 18rpx;
+  padding: 0 10rpx;
+}
+.piclist .pitem .pic .start_time{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0px 0px 4px 4px;
+  color: #fff;
+  text-align: center;
+  height: 42rpx;
+  line-height: 42rpx;
+  font-size: 18rpx;
+  padding: 0 10rpx;
+}
+.piclist .pitem .pic .end{
+  color: #AAACB1;
+  background: rgba(0, 0, 0, 0.3);
+}
+.piclist .pitem .content .c-ft{
+  display: flex;
+}
+.piclist .pitem .content .c-ft .live-avatar{
+  width: 48rpx;
+  height: 48rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.piclist .pitem .content .c-ft .c-ft-label{
+  flex: 1;
+  padding-left: 10rpx;
+  line-height: 48rpx;
+}

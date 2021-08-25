@@ -1,0 +1,29 @@
+.promotion{
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 0 14px 0 rgba(1, 18, 135, 0.08);
+  padding: 30rpx;
+  margin-bottom: 28rpx;
+}
+.promotion .pic-promotion{
+  height: 288rpx;
+}
+.promotion .pm-hd{
+  overflow: hidden;
+  border-radius: 16rpx;
+  justify-content: center;
+  display: flex;
+}
+.promotion .pm-bd{
+  padding: 24rpx 0;
+  font-weight: bold;
+}
+.promotion .pm-ft{
+  display: flex;
+  justify-content: space-between;
+}
+.promotion .pm-ft .pm-ft-btn{
+  text-align: right;
+}
+
+

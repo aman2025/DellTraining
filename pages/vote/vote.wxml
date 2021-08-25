@@ -1,0 +1,15 @@
+<Navbar page-name="投票记录"></Navbar>
+<view class="piclist dell-container large ">
+    <view class="pitem" wx:for="{{list}}" wx:key="{{id}}">
+      <view class="pic">
+         <image mode="aspectFill" class="aspect-pic" src="{{item.image}}" />
+      </view>
+      <view class="content">
+          <view class="c-hd">{{item.name}}</view>
+          <view class="c-ft">
+              <span class="t-ft-label fs12 c9" >已投票</span>
+          </view>
+      </view>
+    </view>
+    <NoData wx:if="{{list.length == 0}}"></NoData>
+</view>

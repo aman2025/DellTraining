@@ -1,0 +1,61 @@
+.select-box {
+  position: relative;
+  width: 100%;
+  font-size: 30rpx;
+}
+
+.select-current {
+  position: relative;
+}
+.select-current .caret{
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  width: 24rpx;
+  height: 14rpx;
+}
+.select-input{
+  background-color: #f8f8f8;
+  border-radius: 16rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  padding: 0 30rpx;
+}
+
+.current-name {
+  display: block;
+  width: 85%;
+  height: 100%;
+  word-wrap: normal;
+  overflow: hidden;
+}
+
+.option-list {
+  position: absolute;
+  width: 100%;
+  top: 88rpx;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  border-radius: 16rpx;
+  background-color: #fff;
+  box-shadow: 0 0 14rpx 0 rgba(1, 18, 135, 0.15);
+  z-index: 999;
+  overflow: hidden;
+  padding:20rpx 0;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  line-height: 70rpx;
+  padding: 0 30rpx;
+}
+
+.option:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.placeholder-color{
+  color: #d7d7d7;
+}

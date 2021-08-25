@@ -1,0 +1,10 @@
+<Navbar page-name="消息详情"></Navbar>
+<view class="dell-container">
+  <view class="news-detail">
+    <view class="nd-hd fs17">{{messageData.name}}</view>
+    <view class="nd-time fs12 c9">{{messageData.create_at}}</view>
+    <view class="nd-bd">
+      <rich-text nodes=" {{messageData.remark}}"></rich-text>
+    </view>
+  </view>
+</view>

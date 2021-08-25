@@ -1,0 +1,41 @@
+.endTime{
+  padding: 0 0 24rpx;
+  text-align: center;
+  border-bottom: 1px solid#D7D7D7;
+  margin-bottom: 40rpx;
+}
+.banner{
+  position: relative;
+}
+.tips{
+  position: absolute;
+  width: 140rpx;
+  top: 100rpx;
+  right: -2rpx;
+  border: 1px solid #fff;
+  text-align: center;
+  color: #fff;
+  line-height: 48rpx;
+  padding: 0 20rpx;
+  border-radius: 28rpx 0px 0px 28rpx;
+}
+.tips:after {
+  content: "";
+  display: inline-block;
+  height: 12rpx;
+  width: 12rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-color: #fff;
+  border-style: solid;
+  -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+  transform: matrix(.71,.71,-.71,.71,0,0);
+  position: relative;
+  top: -4rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 4rpx;
+}
+.t-next{
+  top: 170rpx;
+}

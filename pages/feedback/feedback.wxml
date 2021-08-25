@@ -1,0 +1,107 @@
+<Navbar page-name="意见反馈"></Navbar>
+<view>
+  <image mode="widthFix" src="../../assets/images/banner02.png" class="dell-image" />
+</view>
+<view class="dell-container" bindtap="closeSelect">
+  <view class="dell-form">
+    <view class="feedback-form-item">
+      <view class="df-hd">日期：</view>
+      <view class="df-bd">
+        <!-- 日期选择 -->
+        <view class="date-picker-wrap">
+          <image src="../../assets/images/caretUp.png" class="caret" />
+          <input class="dell-input" disabled="true" value="{{feedbackForm.start_time}}" placeholder="请选择故障日期" placeholder-class="placeholder-color" bindtap="showDatePicker" />
+          <date-picker
+            id="datePicker"
+            value="{{datePickerValue}}" 
+            isShow="{{datePickerIsShow}}"
+            bindsureclick="datePickerOnSureClick"
+            bindcancelclick="datePickerOnCancelClick" />
+        </view>
+        <!-- //日期选择 -->
+      </view>
+    </view>
+    <view class="feedback-form-item">
+      <view class="df-hd">姓名：</view>
+      <view class="df-bd">
+        <input class="dell-input" bindinput="handleName" placeholder="请输入您的真实姓名" placeholder-class="placeholder-color" />
+      </view>
+    </view>
+    <view class="feedback-form-item">
+      <view class="df-hd">Company：</view>
+      <view class="df-bd">
+        <!-- 公司选择 -->
+        <input value="{{feedbackForm.company_id}}" hidden="true"/>
+        <view>
+          <view class="select-wrap">
+            <Select id="companySelect" options="{{companyOptions}}" key="c_id" text="c_name" bind:change="changeCompany"></Select>
+          </view>
+        </view>
+        <!-- //公司选择 -->
+      </view>
+    </view>
+    <view class="feedback-form-item">
+      <view class="df-hd">班次：</view>
+      <view class="df-bd">
+        <!-- 班次 -->
+        <input value="{{feedbackForm.class_id}}" hidden="true"/>
+        <view>
+          <view class="select-wrap">
+            <Select id="classSelect" options="{{classOptions}}" key="cls_id" text="cls_name" bind:change="changeClass"></Select>
+          </view>
+        </view>
+        <!-- //班次 -->
+      </view>
+    </view>
+    <view class="feedback-form-item">
+      <view class="df-hd">反馈类别：</view>
+      <view class="df-bd">
+        <!-- 反馈类别 -->
+        <input value="{{feedbackForm.type_id}}" hidden="true" />
+        <view>
+          <view class="select-wrap">
+            <Select id="categorySelect" options="{{categoryOptions}}" key="g_id" text="g_name" bind:change="changeCategory"></Select>
+          </view>
+        </view>
+        <!-- //反馈类别 -->
+      </view>
+    </view>
+    <!-- 意见详情 -->
+    <view class="feedback-form-item">
+      <view class="df-hd">意见详情：</view>
+      <view class="df-bd" style="position:relative">
+        <view class="textCount c9">
+          <span>{{textareaCount}}</span>/100
+        </view> 
+        <textarea maxlength="100" bindinput="handleCount" class="dell-textarea" placeholder="请用简短语句描述你要反馈的问题" placeholder-class="placeholder-color" />
+      </view>
+    </view>
+    <!-- 图片上传 -->
+    <view class="feedback-form-item">
+      <view class="df-hd">图片上传</view>
+      <view class="df-bd">
+        <view class="upload-img-wrap">
+          <image src="../../assets/images/uploadBg.png" class="upload-bg" bindtap="chooseImg" wx:if="{{chooseImgs.length == 0}}"/>
+          <!-- uploadImg -->
+          <view wx:for="{{chooseImgs}}" wx:key="*this" class="upload-img-item" >
+            <span class="upload-img-close" bindtap="removeImg" data-index="{{index}}"></span>
+            <UploadImg src="{{item}}"></UploadImg>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 提交 -->
+    <view class="feedback-btn-wrap">
+      <button class="btn large" bindtap="submitFB">提交</button>
+      <navigator url="/pages/feedbackList/feedbackList" class="fs12">反馈记录</navigator>
+    </view>
+
+  </view>
+</view>
+<!-- 弹窗 -->
+<Dialog title="{{dialogData.title}}" 
+        content="{{dialogData.content}}" 
+        confirmText="{{dialogData.confirmText}}" 
+        isShown="{{isShown}}"
+        bind:closeEvent="{{dialogData.closeEvent}}"
+        bind:confirmEvent="{{dialogData.confirmEvent}}"/>

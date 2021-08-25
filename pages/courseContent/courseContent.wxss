@@ -1,0 +1,28 @@
+
+.news-detail .nd-hd{
+  font-weight: bold;
+}
+.news-detail .nd-time{
+  padding: 20rpx 0;
+}
+.news-detail .nd-tabs span{
+  display: inline-block;
+  border-radius: 8rpx;
+  border: 1px solid #FF6C6C;
+  color:#FF6C6C;
+  padding: 6rpx;
+  font-size: 22rpx;
+  margin-right: 8rpx;
+}
+.news-detail .nd-bd{
+  line-height: 1.6;
+  padding: 30rpx 0;
+}
+.news-detail .nd-bd p{
+  text-indent: 2rem;
+  display: block;
+}
+.course-video{
+  width: 100% !important;
+  height: 560rpx;
+}

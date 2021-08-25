@@ -1,0 +1,4 @@
+<view class="upload-img">
+  <image src="{{src}}" />
+  <icon color="red" type="clear" size="23" />
+</view>

@@ -1,0 +1,11 @@
+<Navbar page-name="反馈详情" ></Navbar>
+<view class="dell-container">
+  <view class="notice-detail-title">意见详情</view>
+  <view class="notice">
+      <view class="nt-bd">{{feedbackDetail.content}}</view>
+      <view class="nt-ft">{{feedbackDetail.create_at}}</view>
+  </view>
+  <view class="notice-detail-pic-wrap">
+    <image src="{{feedbackDetail.image}}"  mode="widthFix" class="notice-detail-pic"/>
+  </view>
+</view>

@@ -1,0 +1,62 @@
+.qa-item .qa-item-hd{
+  font-weight: bold;
+  padding-bottom: 10rpx;
+}
+.qa-item .qa-cell{
+  display: flex;
+  margin-bottom: 40rpx;
+}
+.qa-item .qa-cell .qa-cell-hd{
+  width: 40rpx;
+  margin-right: 16rpx;
+}
+.qa-item .qa-content{
+  padding: 28rpx 0;
+}
+.courseTest-pic image{
+  height: 180rpx !important;
+}
+/* checkbox */
+checkbox .wx-checkbox-input {
+	width: 40rpx;
+	height: 40rpx;
+	border-radius: 50%;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #0076CE;
+  border-color:#0076CE;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 30rpx;
+  height: 30rpx;  
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+.icon-fail{
+  width: 180rpx;
+  height: 180rpx;
+}
+.fail-result-wrap{
+  padding-bottom: 40rpx;
+}
+.fail-result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fail-text{
+  padding:10rpx 0;
+  display: flex;
+  justify-content: center;
+}
+.fail-tip{
+  display: flex;
+  justify-content: center;
+}

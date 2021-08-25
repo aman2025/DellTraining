@@ -1,0 +1,72 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/bindAccount/bindAccount",
+        "pages/certificate/certificate",
+        "pages/changePassword/changePassword",
+        "pages/courseContent/courseContent",
+        "pages/courseDetail/courseDetail",
+        "pages/courseList/courseList",
+        "pages/courseResult/courseResult",
+        "pages/courseTest/courseTest",
+        "pages/exercises/exercises",
+        "pages/feedback/feedback",
+        "pages/feedbackDetail/feedbackDetail",
+        "pages/feedbackList/feedbackList",
+        "pages/liveList/liveList",
+        "pages/login/login",
+        "pages/messageDetail/messageDetail",
+        "pages/my/my",
+        "pages/newsDetail/newsDetail",
+        "pages/notice/notice",
+        "pages/promotion/promotion",
+        "pages/promotionDetail/promotionDetail",
+        "pages/publicArticle/publicArticle",
+        "pages/rank/rank",
+        "pages/search/search",
+        "pages/vote/vote"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "DELL",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false,
+        "backgroundColor": "#fff"
+    },
+    "tabBar": {
+        "color": "#333",
+        "selectedColor": "#0076CE",
+        "backgroundColor": "#fff",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "assets/images/icon-home.png",
+                "selectedIconPath": "assets/images/icon-home-active.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/notice/notice",
+                "iconPath": "assets/images/icon-msg.png",
+                "selectedIconPath": "assets/images/icon-msg-active.png",
+                "text": "消息"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "iconPath": "assets/images/icon-user.png",
+                "selectedIconPath": "assets/images/icon-user-active.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "plugins": {
+      "live-player-plugin": {
+          "version": "1.3.2",
+          "provider": "wx2b03c6e691cd7370"
+      }
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

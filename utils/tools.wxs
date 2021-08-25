@@ -1,0 +1,65 @@
+var arraySlice = function(val,start,end){
+  return val.slice(start, end)
+}
+var numberToABC = function(val){
+  // todo: String.fromCharCode => undefined
+  var ret = '';
+  switch (val) {
+    case 0:
+      ret = 'A'
+      break;
+    case 1:
+      ret = 'B'
+      break;
+    case 2:
+      ret = 'C'
+      break;
+    case 3:
+      ret = 'D'
+      break;
+    case 4:
+      ret = 'E'
+      break;
+    case 5:
+      ret = 'F'
+      break;
+    default:
+      break;
+  }
+  return ret
+}
+var codeToStatus = function(val){
+  // 101：直播中，102：未开始，103已结束，104禁播，105：暂停，106：异常，107：已过期
+  var ret = '';
+  switch (val) {
+    case 101:
+      ret = '直播中'
+      break;
+    case 102:
+      ret = '未开始'
+      break;
+    case 103:
+      ret = '已结束'
+      break;
+    case 104:
+      ret = '禁播'
+      break;
+    case 105:
+      ret = '暂停'
+      break;
+    case 106:
+      ret = '异常'
+    case 107:
+      ret = '已过期'
+      break;
+    default:
+      break;
+  }
+  return ret
+}
+
+module.exports = {
+  arraySlice: arraySlice,
+  numberToABC: numberToABC,
+  codeToStatus: codeToStatus
+}

@@ -1,0 +1,22 @@
+<Navbar page-name="搜索"></Navbar>
+<view class="search-bar">
+  <image mode="widthFix" src="../../assets/images/search-bar.png" class="search-btn"  bindtap="doSearch"/>
+  <input class="search-input" bindinput="handleInput" value="{{params.search}}"  placeholder="请输入关键字" placeholder-class="placeholder-color" />
+</view>
+<view class="piclist dell-container">
+  <view class="pitem" wx:for="{{courseList}}" wx:key="{{id}}">
+    <view class="pic">
+      <image mode="aspectFill" src="{{item.image}}" class="aspect-pic-default" />
+    </view>
+    <view class="content">
+      <view class="c-hd">{{item.name}}</view>
+      <view class="c-ft">
+        <span class="c-ft-label fs12 c9">{{item.create_at}}</span>
+        <span class="c-ft-btn">
+          <button wx:if="{{item.is_pass == 1}}" class="btn disabled">已通过</button>
+          <button wx:else class="btn" data-cid="{{item.id}}" data-cname="{{item.name}}" bindtap="doStudy">立即学习</button>
+        </span>
+      </view>
+    </view>
+  </view>
+</view>

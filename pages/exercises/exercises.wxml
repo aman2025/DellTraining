@@ -1,0 +1,46 @@
+<Navbar page-name="我的答题"></Navbar>
+<Tab tabList="{{tabList}}" bindtabsItemChange="tabsItemChange">
+  <block wx:if="{{tabList[0].isActive}}">
+    <!-- 未完成 -->
+    <view class="piclist dell-container">
+      <view class="pitem" wx:for="{{otherCourse}}" wx:key="{{id}}" data-cid="{{item.id}}" data-cname="{{item.name}}" bindtap="doStudy">
+        <view class="pic">
+          <image mode="aspectFill" class="aspect-pic-default" src="{{item.image}}"  />
+        </view>
+        <view class="content">
+          <view class="c-hd">{{item.name}}</view>
+          <view class="c-ft">
+            <span class="c-ft-label fs12 c9">{{item.create_at}}</span>
+            <span class="c-ft-btn">
+              <button class="btn" data-cid="{{item.id}}" data-cname="{{item.name}}" bindtap="doStudy">
+                立即学习
+              </button>
+            </span>
+          </view>
+        </view>
+      </view>
+      <NoData wx:if="{{otherCourse.length == 0}}"></NoData>
+    </view>
+    <!-- //未完成 -->
+  </block>
+  <block wx:else>
+    <!-- 未完成 -->
+    <view class="piclist dell-container">
+      <view class="pitem" wx:for="{{passCourse}}" wx:key="{{id}}" data-cid="{{item.id}}" data-cname="{{item.name}}" bindtap="doStudy">
+        <view class="pic">
+          <image mode="widthFix" src="{{item.image}}" style="width:100%" />
+        </view>
+        <view class="content">
+          <view class="c-hd">{{item.name}}</view>
+          <view class="c-ft">
+            <span class="c-ft-label fs12 c9">{{item.create_at}}</span>
+            <span class="c-ft-btn">
+              <button wx:if="{{item.is_pass == 1}}" class="btn disabled">已通过</button>
+            </span>
+          </view>
+        </view>
+      </view>
+      <NoData wx:if="{{passCourse.length == 0}}"></NoData>
+    </view>
+  </block>
+</Tab>

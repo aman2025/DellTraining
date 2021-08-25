@@ -1,0 +1,16 @@
+<Navbar page-name="活动"></Navbar>
+<view class="dell-container">
+  <view class="promotion" wx:for="{{promotionList}}" wx:key="{{id}}" data-id="{{item.id}}" catchtap="toPromotionDetail">
+      <view class="pm-hd">
+          <image mode="widthFix" class="dell-image pic-promotion" src="{{item.image}}"/>
+      </view>
+      <view class="pm-bd">{{item.name}}</view>
+      <view class="pm-ft">
+        <span class="pm-ft-label fs12 c9">{{item.start_at}}</span>
+        <span  class="pm-ft-btn">
+          <button class="btn">参与投票</button>
+        </span>
+      </view>
+  </view>
+  <NoData wx:if="{{promotionList.length == 0}}" ></NoData>
+</view>

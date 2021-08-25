@@ -1,0 +1,40 @@
+.notice{
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 0 14px 0 rgba(1, 18, 135, 0.08);
+  padding: 30rpx;
+  margin-bottom: 28rpx;
+}
+.notice .nt-hd{
+  font-weight: bold;
+  display: flex;
+  position: relative;
+}
+.notice .nt-hd span{
+  padding-left: 26rpx;
+}
+.notice .nt-hd .icon-notice{
+  width: 40rpx;
+  height: 42rpx;
+}
+.notice .nt-bd{
+  padding: 20rpx 0;
+  color: var(--gray9);
+  font-size: 26rpx;
+  
+}
+.notice .nt-ft{
+  font-size: 24rpx;
+  text-align: right;
+  color: var(--gray9);
+}
+.notice .unread{
+  position: absolute;
+  top: 2rpx;
+  left: 25rpx;
+  width: 16rpx;
+  height: 16rpx;
+  background-color: #F66665;
+  border: 4rpx solid #fff;
+  border-radius: 50%;
+}

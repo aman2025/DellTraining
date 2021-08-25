@@ -1,0 +1,15 @@
+
+<view class="dialog_container" hidden="{{!isShown}}">
+    <view class="mask"></view>
+    <view class="dialog">
+        <image mode="widthFix" src="../../assets/images/dialogBg.png"  class="dell-image dialog-bg" />
+        <view class="dialog-body">
+          <view class="dialog-title">{{ title }}</view>
+          <view class="dialog-content">{{ content }}</view>
+          <view class="dialog-footer">
+              <button class="dialog-btn" catchtap="_confirmEvent">{{confirmText}}</button>
+          </view>
+        </view>
+        <image src="../../assets/images/dialog-close.png"  class="dialog-close" catchtap="_closeEvent"/>
+    </view>
+</view>

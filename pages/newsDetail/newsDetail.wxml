@@ -1,0 +1,14 @@
+<Navbar page-name="消息详情"></Navbar>
+<view class="dell-container">
+  <view class="news-detail">
+    <view class="nd-hd fs17">{{newsData.name}}</view>
+    <view class="nd-time fs12 c9">{{newsData.create_at}}</view>
+    <!-- <view class="nd-tabs">
+      <span>重点</span>
+      <span>专业知识</span>
+    </view> -->
+    <view class="nd-bd">
+      <rich-text nodes=" {{newsData.content}}"></rich-text>
+    </view>
+  </view>
+</view>

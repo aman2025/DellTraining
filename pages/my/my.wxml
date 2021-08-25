@@ -1,0 +1,81 @@
+<scroll-view scroll-y="{{true}}"  enhanced="{{true}}" bounces="{{false}}" class="fixBounces">
+<image mode="widthFix" src="../../assets/images/myBg.png" class="dell-image navbar-bg" />
+<Navbar page-name="" show-nav="{{false}}"></Navbar>
+<view class="my-info-wrap">
+    <view class="my-avatar-wrap">
+        <view class="my-avatar">
+            <image src="{{userDetail.avatar}}" mode="aspectFit" style="width:140rpx;height:140rpx" />
+        </view>
+    </view>
+    <view class="content">
+        <view class="nickname">{{userDetail.nickname}}</view>
+        <view class="department">
+            <span class="uid">工号：{{userDetail.job_number}}</span>
+            <span class="dep">部门：{{userDetail.department_secondary}}</span>
+        </view>
+    </view>
+</view>
+<view class="notice-wrap" wx:if="{{message.name}}">
+  <view class="notice" catchtap="toMessageDetail">
+    <view class="nt-hd">
+      <image  class="icon-notice" src="../../assets/images/icon-notice.png" />
+      <span>{{message.name}}</span>
+    </view>
+    <view class="nt-bd" data-id="{{message.id}}">{{message.remark}}</view>
+    <view class="nt-ft">{{message.create_at}}</view>
+  </view>
+</view>
+<view class="no-message"></view>
+<view class="list">
+    <navigator url="/pages/exercises/exercises" class="list-item">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon01.png" />
+        </view>
+        <view class="list-item-bd">我的答题</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator url="/pages/bindAccount/bindAccount" class="list-item">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon02.png" />
+        </view>
+        <view class="list-item-bd">账号绑定</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator url="/pages/changePassword/changePassword" class="list-item">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon03.png" />
+        </view>
+        <view class="list-item-bd">修改密码</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator url="/pages/certificate/certificate" class="list-item">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon04.png" />
+        </view>
+        <view class="list-item-bd">我的证书</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator url="/pages/feedback/feedback" class="list-item" >
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon05.png" />
+        </view>
+        <view class="list-item-bd">意见反馈</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator url="/pages/vote/vote" class="list-item">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon06.png" />
+        </view>
+        <view class="list-item-bd">投票记录</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator class="list-item" bindtap="logout">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon07.png" />
+        </view>
+        <view class="list-item-bd">退出登录</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+</view>
+</scroll-view>
+

@@ -1,0 +1,9 @@
+<Navbar page-name="反馈记录" ></Navbar>
+<view class="dell-container">
+  <view catchtap="toFeedbackDetail" data-fid="{{item.id}}" class="notice" wx:for="{{feedbackList}}" wx:key="*this">
+      <view class="nt-bd">{{item.name}}</view>
+      <view class="nt-ft">提交时间：{{item.create_at}} <span class="nt-space"></span> 故障日期：{{item.start_time}}</view>
+  </view>
+  <!-- 没有记录 -->
+  <NoData wx:if="{{feedbackList.length == 0}}"></NoData>
+</view>

@@ -1,0 +1,6 @@
+.login{
+  padding: 30rpx 0;
+}
+.login-submit{
+  bottom: 30rpx;
+}

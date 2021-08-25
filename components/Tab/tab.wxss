@@ -1,0 +1,31 @@
+
+.tabs_title{
+  background-color: #fff;
+  display: flex;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+}
+.title_item{
+  color: #999;
+  padding: 15rpx 0;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.active{
+  color:#0076CE;
+  font-weight: bold;
+  position: relative;
+}
+.active::after{
+  content: '';
+  width: 28rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+  background-color: #0076CE;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

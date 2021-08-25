@@ -1,0 +1,144 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "01我的",
+                    "pathName": "pages/my/my",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "02我的答题",
+                    "pathName": "pages/exercises/exercises",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "03课程列表",
+                    "pathName": "pages/courseList/courseList",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "04投票",
+                    "pathName": "pages/vote/vote",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "05消息",
+                    "pathName": "pages/notice/notice",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "06排行榜",
+                    "pathName": "pages/rank/rank",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "07活动",
+                    "pathName": "pages/promotion/promotion",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "08活动详情",
+                    "pathName": "pages/promotionDetail/promotionDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "09我的证书",
+                    "pathName": "pages/certificate/certificate",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "10意见反馈",
+                    "pathName": "pages/feedback/feedback",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "11课程详情",
+                    "pathName": "pages/courseDetail/courseDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "12课程测试",
+                    "pathName": "pages/courseTest/courseTest",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "13消息详情",
+                    "pathName": "pages/newsDetail/newsDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "14登录",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "15搜索",
+                    "pathName": "pages/search/search",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "16反馈记录",
+                    "pathName": "pages/feedbackList/feedbackList",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "17绑定账号",
+                    "pathName": "pages/bindAccount/bindAccount",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "18修改密码",
+                    "pathName": "pages/changePassword/changePassword",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "19课程学习内容",
+                    "pathName": "pages/courseContent/courseContent",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "20测试结果",
+                    "pathName": "pages/courseResult/courseResult",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "直播间列表",
+                    "pathName": "pages/liveList/liveList",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

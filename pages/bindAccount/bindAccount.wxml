@@ -1,0 +1,25 @@
+<Navbar page-name="账号绑定"></Navbar>
+<view class="login-wrap dell-container">
+  <view class="login">
+    <view class="login-item">
+      <image src="../../assets/images/icon-bind-user.png" />
+      <input bindinput="handleUsername"  value="{{loginForm.username}}"  placeholder="请输入您的姓名" placeholder-class="placeholder-color" />
+    </view>
+    <view class="login-item">
+      <image src="../../assets/images/icon-bind-phone.png" />
+      <view class="li-ipt">
+        <input  bindinput="handleMobile" value="{{loginForm.mobile}}" type="number" placeholder="请输入您的电话" maxlength="11" placeholder-class="placeholder-color"/>
+      </view>
+    </view>
+  </view>
+  <view class="login-submit">
+    <button class="btn large"  bindtap="doBind">提交</button>
+  </view>
+</view>
+<!-- 弹窗 -->
+<Dialog title="{{dialogData.title}}" 
+        content="{{dialogData.content}}" 
+        confirmText="{{dialogData.confirmText}}" 
+        isShown="{{isShown}}"
+        bind:closeEvent="{{dialogData.closeEvent}}"
+        bind:confirmEvent="{{dialogData.confirmEvent}}"/>

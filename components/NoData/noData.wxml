@@ -1,0 +1,4 @@
+<view class="nodata-wrap" >
+  <image src="../../assets/images/nodata.png" class="nodata" mode="widthFix"  />
+  <div>暂无记录</div>
+</view>

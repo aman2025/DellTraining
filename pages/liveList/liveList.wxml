@@ -1,0 +1,21 @@
+<Navbar page-name="直播间列表"></Navbar>
+<view class="piclist dell-container large">
+  <wxs src="../../utils/tools.wxs" module="tools" />
+  <view class="pitem" wx:for="{{liveList}}" wx:key="{{id}}" data-roomid="{{item.id}}" bindtap="toLivePlayer">
+    <view class="pic">
+      <view class="{{item.live_status == 101 ? 'status' : 'status end'}} ">·{{tools.codeToStatus(item.live_status)}}</view>
+      <view class="start_time">{{item.start_time}}</view>
+      <image mode="aspectFill" class="aspect-pic" src="{{item.cover_img}}"/>
+    </view>
+    <view class="content">
+      <view class="c-hd">{{item.name}}</view>
+      <view class="c-ft">
+        <view class="live-avatar">
+          <image mode="widthFix" src="{{item.cover_img}}" class="dell-image" />
+        </view>
+        <span class="c-ft-label fs12 c9">{{item.anchor_name}}</span>
+      </view>
+    </view>
+    <NoData wx:if="{{liveList.length == 0}}"></NoData>
+  </view>
+</view>

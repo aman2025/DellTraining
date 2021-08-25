@@ -1,0 +1,82 @@
+<scroll-view scroll-y="{{true}}"  enhanced="{{true}}" bounces="{{false}}" class="fixBounces">
+<image mode="widthFix" src="{{courseAllData.image}}" class="dell-image navbar-bg" />
+<Navbar page-name="{{courseName}}"></Navbar>
+<image mode="widthFix" src="{{courseAllData.image}}" class="dell-image space-img" />
+<view class="dell-container">
+  <!-- 循环articles -课程任务 -->
+  <view class="course-detail" wx:for="{{courseAllData.articles}}" wx:key="{{id}}">
+    <view class="cd-hd fs17">
+      <span>课程名称：</span>
+      <em class="course-title-bg"></em>
+    </view>
+    <view class="cd-bd piclist">
+      <view class="pitem art-view" catchtap="toLearn" data-cid="{{item.id}}" data-type="art">
+        <view class="pic">
+          <image mode="aspectFill" src="{{item.image}}" class="aspect-pic-default"  />
+        </view>
+        <view class="content">
+          <view class="c-hd">{{item.name}}</view> 
+          <view class="c-remark c9">{{item.remark}}</view> 
+          <view class="c-ft">
+            <span class="c-ft-label fs12 c9"></span>
+            <span class="c-ft-btn">
+              <button class="btn" wx:if="{{item.is_read == 0}}" catchtap="toLearn" data-cid="{{item.id}}" data-type="art">立即学习</button>
+              <button class="btn disabled" wx:else>已阅读</button>
+            </span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 循环videos -课程任务 -->
+  <view class="course-detail" wx:for="{{courseAllData.videos}}" wx:key="{{id}}">
+    <view class="cd-hd fs17">
+      <span>课程任务：</span>
+      <em class="course-title-bg"></em>
+    </view>
+    <view class="cd-bd video-view">
+      <view class="cd-video-title">{{item.name}}</view>
+      <view class="cd-video-content">
+        <video src="{{item.content}}" class="course-detail-video"  show-center-play-btn="true"  controls="true" objectFit="cover" poster="{{item.image}}" style="border-radius: 16rpx;width:100%"/>
+      </view>
+      <view class="cd-video-tip c9">请先观看视频再做测试</view>
+    </view>
+  </view>
+  <!-- 循环questions -课程测试 -->
+  <view class="course-detail" wx:for="{{courseAllData.questions}}" wx:key="{{id}}">
+    <view class="cd-hd fs17">
+      <span>课程测试：</span>
+      <em class="course-title-bg"></em>
+    </view>
+    <view class="cd-bd piclist">
+      <view class="pitem art-view">
+        <view class="pic">
+          <image mode="aspectFill" src="{{item.image}}" class="aspect-pic-default" />
+        </view>
+        <view class="content">
+          <view class="c-hd">{{item.name}}</view> 
+          <view class="c-remark c9">{{item.remark}}</view> 
+          <view class="c-ft">
+            <span class="c-ft-label fs12 c9"></span>
+            <span class="c-ft-btn">
+              <button wx:if="{{courseAllData.is_pass == 0 }}" class="btn" catchtap="toTest" data-cid="{{courseAllData.id}}" data-pid="{{item.id}}" >立即测试</button>
+              <button wx:else class="btn disabled" >已通过</button>
+            </span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btn-wrap">
+    <button class="btn large" wx:if="{{courseAllData.is_pass == 1}}" bindtap="getCertificate">查看证书</button>
+    <button class="btn large disabled" wx:elif="{{courseAllData.is_pass == 0}}" bindtap="showTip">领取证书</button>
+    <button class="btn large" wx:elif="{{courseAllData.is_pass == 2}}" bindtap="getCertificate">查看证书</button>
+  </view>
+</view>
+<Dialog title="{{dialogData.title}}" 
+        content="{{dialogData.content}}" 
+        confirmText="{{dialogData.confirmText}}" 
+        isShown="{{isShown}}"
+        bind:closeEvent="{{dialogData.closeEvent}}"
+        bind:confirmEvent="{{dialogData.confirmEvent}}"/>
+</scroll-view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Navbar": "../../components/Navbar/navbar"
+  },
+  "enablePullDownRefresh": false,
+  "disableScroll":true
+}

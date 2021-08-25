@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Tab": "../../components/Tab/tab",
+    "Navbar": "../../components/Navbar/navbar",
+    "NoData": "../../components/NoData/noData"
+  }
+}

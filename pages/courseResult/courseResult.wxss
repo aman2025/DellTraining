@@ -1,0 +1,27 @@
+.icon-pass{
+  width: 180rpx;
+  height: 180rpx;
+}
+.pass-result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200rpx;
+  flex-direction: column;
+}
+.pass-text{
+  padding:20rpx 0;
+  display: flex;
+  justify-content: center;
+}
+.pass-score,
+.pass-tip{
+  display: flex;
+  justify-content: center;
+}
+.pass-tip{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 32rpx;
+}

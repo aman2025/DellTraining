@@ -1,0 +1,19 @@
+<Navbar page-name="我的证书"></Navbar>
+<view class="dell-container">
+  <view class="certificate" wx:for="{{certificate}}">
+      <view class="cf-hd">{{item.cert.name}}</view>
+      <view class="cf-bd">
+        <image mode="widthFix"  bindtap="topic_preview" data-url="{{item.image}}" src="{{item.image}}"  class="dell-image" />
+        <!-- <view class="cf-text">
+          <span>兹证明:白茶123456</span>
+          <span>已于2021年07月08日</span>
+          <span>
+            <p>在CCCManufacturingTrainingAPP</p>
+            <p>学习完成"FY20Q4RBARefreshTraining'并通过考核。</p>
+          </span>
+        </view> -->
+      </view>
+  </view>
+  <NoData wx:if="{{certificate.length == 0}}"></NoData>
+
+</view>

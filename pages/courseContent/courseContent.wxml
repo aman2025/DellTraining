@@ -1,0 +1,14 @@
+<Navbar page-name="课程详情"></Navbar>
+<view class="dell-container">
+  <view class="news-detail">
+    <view class="nd-hd fs17">{{articleInfo.name}}</view>
+    <view class="nd-time fs12 c9">{{articleInfo.create_at}}</view>
+    <view class="nd-tabs">
+      <span wx:for="{{articleInfo.category}}" wx:for-index="key" wx:for-item="value">{{value}}</span>
+    </view>
+    <view class="nd-bd">
+      <rich-text nodes="{{articleInfo.content}}"></rich-text>
+      <video wx:if="{{is_video}}" src="{{articleInfo.content}}" class="course-video" />
+    </view>
+  </view>
+</view>

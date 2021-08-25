@@ -1,0 +1,19 @@
+<Navbar page-name="课程列表"></Navbar>
+<view class="piclist dell-container">
+  <view class="pitem" wx:for="{{courseList}}" wx:key="{{id}}" data-cid="{{item.id}}" data-cname="{{item.name}}" bindtap="doStudy">
+    <view class="pic">
+      <image mode="aspectFill" class="aspect-pic-default" src="{{item.image}}"  />
+    </view>
+    <view class="content">
+      <view class="c-hd">{{item.name}}</view>
+      <view class="c-ft">
+        <span class="c-ft-label fs12 c9">{{item.create_at}}</span>
+        <span class="c-ft-btn">
+          <button wx:if="{{item.is_pass == 1}}" class="btn disabled">已通过</button>
+          <button wx:else class="btn" data-cid="{{item.id}}" data-cname="{{item.name}}" bindtap="doStudy">立即学习</button>
+        </span>
+      </view>
+    </view>
+  </view>
+  <NoData wx:if="{{courseList.length == 0}}"></NoData>
+</view>

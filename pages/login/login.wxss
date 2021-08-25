@@ -1,0 +1,4 @@
+/* 单独页面中，导航栏背景透明 */
+.navbar {
+  background-color: transparent !important;
+}

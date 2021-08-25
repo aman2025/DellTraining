@@ -1,0 +1,15 @@
+.nodata-wrap{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.nodata{
+  width: 486rpx;
+  padding-top: 50rpx;
+  align-self: center
+}
+.nodata-wrap > div{
+  text-align: center;
+  color: #999;
+  align-self: center
+}
