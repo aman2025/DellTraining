@@ -39,3 +39,6 @@
   color: #0076CE;
   padding: 28rpx 0 10rpx;
 }
+.feedback_img{
+  height: 260rpx;
+}

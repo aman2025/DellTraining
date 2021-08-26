@@ -18,6 +18,7 @@ Page({
       content: "",
     },
     isShown: false,
+    background_image: ''
   },
   uploadImgs: [], // 上传后返回的外链图片地址
   onReady() {
@@ -228,6 +229,7 @@ Page({
       var companys = res.data.data.company
       var classes = res.data.data.class
       var categorys = res.data.data.type
+      var bg_img = res.data.data.background_image
       var newCompanys = []
       var newClasses = []
       var newCategorys = []
@@ -252,7 +254,8 @@ Page({
       this.setData({
         companyOptions: newCompanys,
         classOptions: newClasses,
-        categoryOptions: newCategorys
+        categoryOptions: newCategorys,
+        background_image: bg_img
       })
     })
   },

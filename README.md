@@ -1,2 +1,0 @@
-# DellTraining
-wx.miniprogram

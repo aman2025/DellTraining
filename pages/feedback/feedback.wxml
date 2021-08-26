@@ -1,6 +1,6 @@
 <Navbar page-name="意见反馈"></Navbar>
 <view>
-  <image mode="widthFix" src="../../assets/images/banner02.png" class="dell-image" />
+  <image mode="aspectFill" src="{{background_image}}" class="dell-image feedback_img" />
 </view>
 <view class="dell-container" bindtap="closeSelect">
   <view class="dell-form">

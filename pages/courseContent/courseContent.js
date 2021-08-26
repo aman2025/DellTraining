@@ -51,5 +51,15 @@ Page({
     .then(res => {
       console.log("已阅读");
     })
+  },
+  onUnload(){
+    // 手机物理返回键监听页面卸载 ,或按导航返回键
+    this.goBack()
+  },
+  goBack(e){
+     // 课程内容返回到课程详情，带上id
+     wx.redirectTo({
+      url: '/pages/courseDetail/courseDetail?id=' + this.data.articleId,
+    })
   }
 });

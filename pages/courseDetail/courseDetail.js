@@ -13,6 +13,9 @@ Page({
     },
     videoSliceParams: '?fops=avthumb/m3u8/noDomain/1/vb/500k/t/10'
   },
+  onShow(options) {
+    this.getCourseDetail();
+  },
   onLoad(options) {
     var cid = options.id; // 课程id
     var cname = options.name; // 课程名字
