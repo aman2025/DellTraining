@@ -1,3 +1,4 @@
+<scroll-view scroll-y="{{true}}"  enhanced="{{true}}" bounces="{{false}}" class="fixBounces">
 <Navbar page-name="活动详情"></Navbar>
 <view class="banner">
   <image mode="widthFix" src="{{promotionDetail.image}}"  class="dell-image" />
@@ -31,3 +32,4 @@
         isShown="{{isShown}}"
         bind:closeEvent="{{dialogData.closeEvent}}"
         bind:confirmEvent="{{dialogData.confirmEvent}}"/>
+</scroll-view>

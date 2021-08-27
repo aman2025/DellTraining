@@ -2,5 +2,7 @@
   "usingComponents": {
     "Navbar": "../../components/Navbar/navbar",
     "Dialog": "../../components/Dialog/dialog"
-  }
+  },
+  "enablePullDownRefresh": false,
+  "disableScroll":true  
 }

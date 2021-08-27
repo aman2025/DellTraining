@@ -6,11 +6,11 @@ Page({
     promotionDetail: {},
     promotionList: [],
     promotionId: 0,
+    isFirst: true
   },
   onLoad(options) {
-    this.showRules();
     this.setData({
-      promotionId: options.id,
+      promotionId: options.id
     });
     this.getPromotion();
   },
@@ -24,8 +24,14 @@ Page({
     }).then((res) => {
       this.setData({
         promotionDetail: res.data.data.detail,
-        promotionList: res.data.data.list,
+        promotionList: res.data.data.list
       });
+      this.data.isFirst && this.showRules();
+    });
+  },
+  onUnload(){
+    this.setData({
+      isFirst: true
     });
   },
   //投票
@@ -42,8 +48,8 @@ Page({
           title: "提示",
           content: "投票成功",
           confirmText: "确定",
-          closeEvent: "_closeEvent",
-          confirmEvent: "_confirmEvent",
+          closeEvent: "_confirmSuccessEvent",
+          confirmEvent: "_confirmSuccessEvent",
         };
         this.setData({
           dialogData,
@@ -53,9 +59,7 @@ Page({
         let dialogData = {
           title: "提示",
           content: "今日投票次数已达上限",
-          confirmText: "确定",
-          closeEvent: "_closeEvent",
-          confirmEvent: "_closeEvent",
+          confirmText: "确定"
         };
         this.setData({
           dialogData,
@@ -65,27 +69,19 @@ Page({
       
     });
   },
-  _closeEvent(e) {
-    this.getPromotion();
+  _confirmSuccessEvent(e) {
     this.setData({
       isShown: false,
+      isFirst: false
     });
-  },
-  _confirmEvent(e) {
     this.getPromotion();
-    this.setData({
-      isShown: false,
-    });
   },
   // 活动规则
   showRules() {
     let dialogData = {
       title: "活动规则",
-      content:
-        "1、每队基础分为100分。2、比赛题型分个人必答和集体必答。 3、个人必答由选手按座次抽题独立作答，答对加10分，答错不扣分；队友不得提醒或补充，否则题目作废不予加分；答题时间为30秒，超过时间不加分。  4、集体必答题时间1分钟，答对加20分，答错不扣分；在规定时间内队友可以提醒或补充。",
-      confirmText: "我知道了",
-      closeEvent: "_closeEvent",
-      confirmEvent: "_confirmEvent",
+      content: this.data.promotionDetail.content,
+      confirmText: "我知道了"
     };
     this.setData({
       dialogData,

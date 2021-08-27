@@ -5,7 +5,9 @@
         <image mode="widthFix" src="../../assets/images/dialogBg.png"  class="dell-image dialog-bg" />
         <view class="dialog-body">
           <view class="dialog-title">{{ title }}</view>
-          <view class="dialog-content">{{ content }}</view>
+          <view class="dialog-content">
+           <rich-text nodes="{{content}}"></rich-text>
+          </view>
           <view class="dialog-footer">
               <button class="dialog-btn" catchtap="_confirmEvent">{{confirmText}}</button>
           </view>
