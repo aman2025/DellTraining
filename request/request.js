@@ -29,7 +29,7 @@ export const request = (params) => {
               }
             }) 
             wx.navigateTo({
-               url: '/pages/login/login',
+              url: '/pages/login/login?beforeUrl=' + params.url
             })
            }else{
              resolve(result);
