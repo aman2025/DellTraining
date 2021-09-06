@@ -6,7 +6,8 @@ Page({
     promotionDetail: {},
     promotionList: [],
     promotionId: 0,
-    isFirst: true
+    isFirst: true,
+    customStyle: 'text-align: left;'
   },
   onLoad(options) {
     this.setData({

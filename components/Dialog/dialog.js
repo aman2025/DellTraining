@@ -30,7 +30,11 @@ Component({
     isShown: {
         type: Boolean,
         value: false
-    }
+    },
+    customStyle: {
+      type: String,
+      value: ''
+    },
   },
 
   /**

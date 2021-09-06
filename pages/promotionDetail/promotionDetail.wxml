@@ -31,5 +31,7 @@
         confirmText="{{dialogData.confirmText}}" 
         isShown="{{isShown}}"
         bind:closeEvent="{{dialogData.closeEvent}}"
-        bind:confirmEvent="{{dialogData.confirmEvent}}"/>
+        bind:confirmEvent="{{dialogData.confirmEvent}}"
+        customStyle="{{customStyle}}"
+        />
 </scroll-view>
